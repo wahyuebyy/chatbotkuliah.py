@@ -1,0 +1,298 @@
+{
+  "_catatan": "DATA CONTOH. Ganti isi 'jawaban' dengan informasi resmi Prodi yang sudah diverifikasi sebelum dikumpulkan/dipakai.",
+  "entri": [
+    {
+      "id": "krs-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana cara mengisi KRS?",
+      "variasi": [
+        "cara registrasi mata kuliah",
+        "kapan pengisian KRS dibuka",
+        "isi kartu rencana studi online"
+      ],
+      "kata_kunci": [
+        "krs",
+        "kartu rencana studi",
+        "registrasi",
+        "mata kuliah",
+        "sistem akademik"
+      ],
+      "jawaban": "Pengisian KRS dilakukan secara online melalui sistem informasi akademik kampus pada periode yang tercantum di kalender akademik. Langkahnya: login, pilih menu KRS, pilih mata kuliah sesuai batas SKS, simpan, lalu minta persetujuan Dosen Pembimbing Akademik (PA).",
+      "sumber": "Panduan Akademik - Bab Registrasi"
+    },
+    {
+      "id": "sks-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Berapa maksimal SKS yang boleh diambil per semester?",
+      "variasi": [
+        "batas sks semester",
+        "jumlah sks yang bisa diambil",
+        "beban studi maksimal"
+      ],
+      "kata_kunci": [
+        "sks",
+        "beban studi",
+        "ipk",
+        "ips",
+        "maksimal"
+      ],
+      "jawaban": "Batas SKS per semester ditentukan berdasarkan IPS semester sebelumnya (semakin tinggi IPS, semakin besar batas SKS yang boleh diambil, umumnya 18-24 SKS). Mahasiswa semester pertama mengikuti paket SKS yang sudah ditetapkan.",
+      "sumber": "Panduan Akademik - Bab Beban Studi"
+    },
+    {
+      "id": "cuti-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Bagaimana prosedur cuti akademik?",
+      "variasi": [
+        "cara mengajukan cuti kuliah",
+        "syarat cuti akademik",
+        "izin tidak aktif satu semester"
+      ],
+      "kata_kunci": [
+        "cuti",
+        "cuti akademik",
+        "tidak aktif",
+        "izin",
+        "non aktif"
+      ],
+      "jawaban": "Cuti akademik diajukan sebelum perkuliahan semester berjalan dimulai: isi formulir cuti, minta persetujuan Dosen PA dan Ketua Prodi, lalu serahkan ke bagian akademik fakultas. Masa cuti umumnya tidak dihitung dalam masa studi, namun ada batas maksimal total cuti selama studi.",
+      "sumber": "Panduan Akademik - Bab Status Mahasiswa"
+    },
+    {
+      "id": "skripsi-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Apa syarat mengajukan skripsi atau tugas akhir?",
+      "variasi": [
+        "kapan boleh ambil skripsi",
+        "persyaratan proposal tugas akhir",
+        "minimal sks untuk skripsi"
+      ],
+      "kata_kunci": [
+        "skripsi",
+        "tugas akhir",
+        "proposal",
+        "syarat",
+        "pembimbing"
+      ],
+      "jawaban": "Syarat umum: telah menempuh jumlah SKS minimum yang ditetapkan prodi, tidak ada nilai E pada mata kuliah wajib inti, dan telah lulus mata kuliah metodologi penelitian. Mahasiswa mengajukan judul dan proposal, kemudian prodi menetapkan dosen pembimbing.",
+      "sumber": "Pedoman Tugas Akhir Prodi"
+    },
+    {
+      "id": "ujian-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Apa yang harus dilakukan jika tidak bisa mengikuti ujian?",
+      "variasi": [
+        "ujian susulan",
+        "sakit saat UTS",
+        "tidak hadir UAS"
+      ],
+      "kata_kunci": [
+        "ujian susulan",
+        "uts",
+        "uas",
+        "sakit",
+        "izin",
+        "berhalangan"
+      ],
+      "jawaban": "Mahasiswa yang berhalangan karena alasan yang sah (misalnya sakit dengan surat dokter) dapat mengajukan ujian susulan kepada dosen pengampu dan Prodi dengan melampirkan bukti pendukung paling lambat sesuai batas waktu yang ditetapkan.",
+      "sumber": "Panduan Akademik - Bab Evaluasi Hasil Belajar"
+    },
+    {
+      "id": "nilai-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana cara menghitung IPK dan IPS?",
+      "variasi": [
+        "rumus ipk",
+        "konversi nilai huruf ke angka",
+        "cara hitung indeks prestasi"
+      ],
+      "kata_kunci": [
+        "ipk",
+        "ips",
+        "nilai",
+        "bobot",
+        "indeks prestasi",
+        "rumus"
+      ],
+      "jawaban": "IPS = jumlah (bobot nilai x SKS) dibagi total SKS pada semester itu. IPK dihitung dengan cara yang sama untuk seluruh semester yang telah ditempuh. Bobot umum: A=4, B=3, C=2, D=1, E=0.",
+      "sumber": "Panduan Akademik - Bab Penilaian"
+    },
+    {
+      "id": "beasiswa-01",
+      "kategori": "Kemahasiswaan",
+      "pertanyaan": "Bagaimana cara mendaftar beasiswa?",
+      "variasi": [
+        "info beasiswa kampus",
+        "syarat beasiswa prestasi",
+        "kapan pendaftaran beasiswa"
+      ],
+      "kata_kunci": [
+        "beasiswa",
+        "kip",
+        "prestasi",
+        "bantuan",
+        "kemahasiswaan"
+      ],
+      "jawaban": "Informasi beasiswa diumumkan oleh bagian kemahasiswaan fakultas/universitas. Umumnya mahasiswa perlu menyiapkan transkrip nilai, surat keterangan aktif, dan berkas pendukung lain sesuai jenis beasiswa, lalu mengunggahnya pada periode pendaftaran.",
+      "sumber": "Pengumuman Kemahasiswaan"
+    },
+    {
+      "id": "legalisir-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Bagaimana cara meminta surat keterangan aktif kuliah atau legalisir?",
+      "variasi": [
+        "surat aktif kuliah",
+        "legalisir ijazah transkrip",
+        "urus surat keterangan mahasiswa"
+      ],
+      "kata_kunci": [
+        "surat keterangan",
+        "aktif kuliah",
+        "legalisir",
+        "transkrip",
+        "ijazah",
+        "administrasi"
+      ],
+      "jawaban": "Surat keterangan aktif kuliah dan legalisir dokumen diajukan ke bagian akademik fakultas dengan membawa kartu mahasiswa dan berkas yang akan dilegalisir. Waktu proses umumnya beberapa hari kerja.",
+      "sumber": "Layanan Akademik Fakultas"
+    },
+    {
+      "id": "pa-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Siapa dosen pembimbing akademik saya dan apa tugasnya?",
+      "variasi": [
+        "dosen PA",
+        "konsultasi akademik",
+        "wali dosen"
+      ],
+      "kata_kunci": [
+        "dosen pa",
+        "pembimbing akademik",
+        "wali",
+        "konsultasi",
+        "persetujuan krs"
+      ],
+      "jawaban": "Dosen PA ditetapkan oleh prodi dan dapat dilihat di sistem informasi akademik. Tugasnya mendampingi perencanaan studi, menyetujui KRS, dan membantu mahasiswa yang mengalami kendala akademik.",
+      "sumber": "Panduan Akademik - Bab Bimbingan Akademik"
+    },
+    {
+      "id": "kontak-01",
+      "kategori": "Informasi Umum",
+      "pertanyaan": "Bagaimana cara menghubungi admin atau sekretariat Prodi?",
+      "variasi": [
+        "kontak prodi",
+        "jam layanan akademik",
+        "email sekretariat jurusan"
+      ],
+      "kata_kunci": [
+        "kontak",
+        "admin",
+        "sekretariat",
+        "jam layanan",
+        "email",
+        "prodi"
+      ],
+      "jawaban": "Hubungi sekretariat Prodi pada jam kerja melalui email resmi atau datang langsung ke ruang sekretariat. (Isi dengan kontak resmi Prodi Anda.)",
+      "sumber": "Website Prodi"
+    },
+    {
+      "id": "kalender-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Di mana saya bisa melihat kalender akademik dan jadwal UTS/UAS?",
+      "variasi": [
+        "kapan jadwal ujian tengah semester",
+        "kapan perkuliahan semester baru dimulai",
+        "jadwal kuliah dan ujian"
+      ],
+      "kata_kunci": [
+        "kalender akademik",
+        "jadwal",
+        "uts",
+        "uas",
+        "awal perkuliahan",
+        "libur"
+      ],
+      "jawaban": "Kalender akademik (awal perkuliahan, periode KRS, UTS, UAS, dan libur) diumumkan setiap semester melalui website Prodi dan sistem informasi akademik. Jadwal kuliah dan ujian per kelas dapat dilihat pada menu jadwal di sistem informasi akademik.",
+      "sumber": "Kalender Akademik Universitas"
+    },
+    {
+      "id": "magang-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Bagaimana prosedur kerja praktik atau magang?",
+      "variasi": [
+        "cara daftar kerja praktik",
+        "syarat ikut magang",
+        "kp itu bagaimana"
+      ],
+      "kata_kunci": [
+        "kerja praktik",
+        "magang",
+        "kp",
+        "instansi",
+        "laporan kp",
+        "pembimbing lapangan"
+      ],
+      "jawaban": "Mahasiswa yang memenuhi syarat SKS minimum mengajukan permohonan kerja praktik beserta instansi tujuan kepada Prodi. Setelah disetujui dan dosen pembimbing ditetapkan, mahasiswa melaksanakan kerja praktik, menyusun laporan, lalu mempresentasikannya sesuai jadwal dari Prodi.",
+      "sumber": "Pedoman Kerja Praktik Prodi"
+    },
+    {
+      "id": "sidang-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Bagaimana prosedur sidang, yudisium, dan wisuda?",
+      "variasi": [
+        "cara daftar sidang akhir",
+        "syarat yudisium",
+        "kapan wisuda dan berkas apa yang disiapkan"
+      ],
+      "kata_kunci": [
+        "sidang",
+        "yudisium",
+        "wisuda",
+        "lulus",
+        "berkas kelulusan",
+        "pendaftaran sidang"
+      ],
+      "jawaban": "Setelah naskah disetujui dosen pembimbing, mahasiswa mendaftar sidang melalui bagian akademik dengan melengkapi berkas yang ditentukan. Mahasiswa yang dinyatakan lulus sidang mengikuti yudisium, kemudian mendaftar wisuda sesuai pengumuman dari fakultas/universitas.",
+      "sumber": "Pedoman Tugas Akhir Prodi"
+    },
+    {
+      "id": "mengulang-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana jika nilai saya D atau E, apakah bisa mengulang mata kuliah?",
+      "variasi": [
+        "cara perbaikan nilai",
+        "mengulang mata kuliah yang tidak lulus",
+        "nilai e harus diulang"
+      ],
+      "kata_kunci": [
+        "nilai e",
+        "nilai d",
+        "mengulang",
+        "perbaikan nilai",
+        "tidak lulus",
+        "semester pendek"
+      ],
+      "jawaban": "Mata kuliah dengan nilai di bawah batas kelulusan dapat diulang dengan mengambilnya kembali pada KRS semester berikutnya atau pada semester pendek jika dibuka. Ketentuan nilai yang dipakai (nilai terbaru atau tertinggi) mengikuti aturan di Panduan Akademik.",
+      "sumber": "Panduan Akademik - Bab Penilaian"
+    },
+    {
+      "id": "batasstudi-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Berapa lama batas maksimal masa studi?",
+      "variasi": [
+        "maksimal semester kuliah",
+        "batas waktu studi",
+        "kalau kuliah melewati batas semester bagaimana"
+      ],
+      "kata_kunci": [
+        "masa studi",
+        "batas studi",
+        "maksimal semester",
+        "drop out",
+        "evaluasi studi"
+      ],
+      "jawaban": "Batas maksimal masa studi ditetapkan dalam Panduan Akademik dan dievaluasi secara berkala oleh Prodi. Mahasiswa yang mendekati batas tersebut dianjurkan berkonsultasi dengan Dosen PA mengenai rencana penyelesaian studi.",
+      "sumber": "Panduan Akademik - Bab Status Mahasiswa"
+    }
+  ]
+}
