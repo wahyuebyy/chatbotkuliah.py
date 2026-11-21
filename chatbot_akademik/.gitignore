@@ -1,0 +1,15 @@
+# Rahasia & berkas lokal -- JANGAN di-commit
+.env
+*.key
+
+# Log percakapan (bisa berisi pertanyaan mahasiswa)
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/

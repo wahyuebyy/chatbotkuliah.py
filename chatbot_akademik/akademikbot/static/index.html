@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AkademikBot</title>
+<style>
+  :root {
+    --bg: #f4f6fb; --panel: #ffffff; --ink: #1b2233; --muted: #667089; --line: #e3e7f0;
+    --brand: #2f5bea; --brand-ink: #ffffff; --user: #2f5bea; --bot: #eef1f8;
+    --kb: #12805c; --llm: #5b3fd1; --fb: #c2410c; --sap: #0e7490; --sar: #a16207;
+    --shadow: 0 10px 30px rgba(20, 30, 60, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e1220; --panel: #161b2e; --ink: #e8ecf8; --muted: #9aa5c4; --line: #262d47;
+      --brand: #6f8cff; --brand-ink: #0e1220; --user: #3452c9; --bot: #1f2640;
+      --kb: #4ade9f; --llm: #a78bfa; --fb: #fb923c; --sap: #22d3ee; --sar: #facc15;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .4); }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--bg); color: var(--ink); display: flex; justify-content: center;
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .app { width: 100%; max-width: 760px; height: 100dvh; display: flex; flex-direction: column;
+    background: var(--panel); box-shadow: var(--shadow); }
+  header { display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+    border-bottom: 1px solid var(--line); }
+  .logo { width: 38px; height: 38px; border-radius: 11px; background: var(--brand);
+    color: var(--brand-ink); display: grid; place-items: center; font-weight: 700; }
+  header h1 { font-size: 17px; margin: 0; line-height: 1.2; }
+  header small { color: var(--muted); display: block; font-size: 12.5px; }
+  .spacer { flex: 1; }
+  button { font: inherit; cursor: pointer; }
+  .ghost { background: none; border: 1px solid var(--line); color: var(--ink);
+    border-radius: 9px; padding: 6px 12px; font-size: 14px; }
+  .ghost:hover { border-color: var(--brand); color: var(--brand); }
+  #log { flex: 1; overflow-y: auto; padding: 18px 16px; display: flex; flex-direction: column;
+    gap: 14px; scroll-behavior: smooth; }
+  .row { display: flex; flex-direction: column; max-width: 88%; }
+  .row.user { align-self: flex-end; align-items: flex-end; }
+  .row.bot { align-self: flex-start; align-items: flex-start; }
+  .bubble { padding: 10px 14px; border-radius: 16px; white-space: pre-wrap; word-wrap: break-word;
+    overflow-wrap: anywhere; }
+  .user .bubble { background: var(--user); color: #fff; border-bottom-right-radius: 5px; }
+  .bot .bubble { background: var(--bot); border-bottom-left-radius: 5px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 5px; font-size: 12px;
+    color: var(--muted); align-items: center; }
+  .badge { border: 1px solid currentColor; border-radius: 999px; padding: 0 8px; font-weight: 600; }
+  .m-kb { color: var(--kb); } .m-llm { color: var(--llm); } .m-fallback { color: var(--fb); }
+  .m-sapaan { color: var(--sap); } .m-saran { color: var(--sar); }
+  .src { margin-top: 3px; font-size: 12.5px; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 10px; }
+  .chips[hidden] { display: none; }
+  .chip { border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+    border-radius: 999px; padding: 6px 12px; font-size: 13.5px; }
+  .chip:hover { border-color: var(--brand); color: var(--brand); }
+  form { display: flex; gap: 10px; padding: 12px 16px 16px; border-top: 1px solid var(--line); }
+  textarea { flex: 1; resize: none; font: inherit; color: var(--ink); background: var(--bg);
+    border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; max-height: 140px; }
+  textarea:focus { outline: 2px solid var(--brand); outline-offset: 0; border-color: transparent; }
+  .send { background: var(--brand); color: var(--brand-ink); border: 0; border-radius: 14px;
+    padding: 0 20px; font-weight: 600; }
+  .send:disabled { opacity: .5; cursor: default; }
+  .typing span { display: inline-block; width: 7px; height: 7px; margin: 0 2px; border-radius: 50%;
+    background: var(--muted); animation: b 1s infinite; }
+  .typing span:nth-child(2) { animation-delay: .15s; } .typing span:nth-child(3) { animation-delay: .3s; }
+  @keyframes b { 0%, 80%, 100% { transform: translateY(0); opacity: .4; } 40% { transform: translateY(-4px); opacity: 1; } }
+  .menubox { white-space: normal; max-width: 100%; }
+  .menubox .jdl { font-weight: 700; margin-bottom: 6px; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .tbl th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12px; padding: 4px 8px;
+    border-bottom: 1px solid var(--line); }
+  .tbl td { padding: 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .tbl tr:last-child td { border-bottom: 0; }
+  .tbl .no { width: 34px; text-align: center; color: var(--muted); padding: 7px 4px; }
+  .tbl .ket { color: var(--muted); font-size: 12.5px; padding: 7px 8px; }
+  .pilih { display: block; width: 100%; text-align: left; background: none; border: 0; color: var(--ink);
+    padding: 7px 8px; border-radius: 8px; }
+  .pilih:hover, .pilih:focus-visible { background: var(--panel); color: var(--brand); outline: none; }
+  .menurow.lama { opacity: .55; pointer-events: none; }
+  .menunav { display: flex; gap: 8px; margin-top: 8px; }
+  .semester { color: var(--muted); font-size: 12.5px; }
+  .quick { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 8px; }
+  .quick-judul { font-size: 12px; color: var(--muted); }
+  .qbtn { text-align: left; background: var(--panel); color: var(--brand); border: 1px solid var(--brand);
+    border-radius: 14px; padding: 6px 12px; font-size: 13.5px; line-height: 1.35; }
+  .qbtn:hover, .qbtn:focus-visible { background: var(--brand); color: var(--brand-ink); outline: none; }
+  .quick.lama { opacity: .45; pointer-events: none; }
+  .fb { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+  .fbtn { background: none; border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px;
+    font-size: 12px; color: var(--muted); }
+  .fbtn:hover:not(:disabled) { border-color: var(--brand); color: var(--brand); }
+  .fbtn:disabled { opacity: .5; cursor: default; }
+  .tools { display: flex; align-items: center; gap: 10px; padding: 0 16px 8px; font-size: 12.5px;
+    color: var(--muted); }
+  .tools .ghost { padding: 3px 10px; font-size: 13px; }
+  .tools .ghost:disabled { opacity: .45; cursor: default; }
+  .tools select { font: inherit; font-size: 13px; color: var(--ink); background: var(--bg);
+    border: 1px solid var(--line); border-radius: 8px; padding: 2px 4px; }
+  .m-alat { color: var(--sap); }
+  .banner { display: flex; align-items: flex-start; gap: 10px; padding: 8px 16px; font-size: 13.5px;
+    background: color-mix(in srgb, var(--sar) 14%, var(--panel)); border-bottom: 1px solid var(--line); }
+  .banner[hidden] { display: none; }
+  .banner .isi { flex: 1; } .banner .isi div + div { margin-top: 2px; }
+  .banner .cat { color: var(--muted); font-size: 12px; }
+  .banner button { background: none; border: 0; color: var(--muted); font-size: 18px; line-height: 1; }
+  .docchip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--brand); color: var(--brand);
+    border-radius: 999px; padding: 1px 4px 1px 10px; font-size: 12.5px; max-width: 220px; }
+  .docchip[hidden] { display: none; }
+  .docchip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .docchip button { background: none; border: 0; color: inherit; font-size: 15px; line-height: 1; padding: 0 4px; }
+  .tools { flex-wrap: wrap; }
+  .kuis { margin-top: 8px; display: flex; flex-direction: column; gap: 12px; max-width: 100%; }
+  .kq { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--panel); }
+  .kq-soal { font-weight: 600; margin-bottom: 6px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .kq-opsi { display: flex; flex-direction: column; gap: 6px; }
+  .qopsi { text-align: left; background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 10px; padding: 6px 10px; font-size: 14px; overflow-wrap: anywhere; }
+  .qopsi:hover:not(:disabled) { border-color: var(--brand); }
+  .qopsi.benar { border-color: var(--kb); background: color-mix(in srgb, var(--kb) 18%, var(--panel)); opacity: 1; }
+  .qopsi.salah { border-color: var(--fb); background: color-mix(in srgb, var(--fb) 18%, var(--panel)); opacity: 1; }
+  .qopsi:disabled { cursor: default; opacity: .8; }
+  .kq-pem { margin-top: 6px; font-size: 13px; color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .kq-skor { font-weight: 700; color: var(--brand); }
+  @media (prefers-reduced-motion: reduce) { .typing span { animation: none; } #log { scroll-behavior: auto; } }
+  @media (max-width: 520px) { .row { max-width: 94%; } .ghost.hide-sm { display: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="logo" aria-hidden="true">A</div>
+    <div><h1>AkademikBot</h1><small id="status">Layanan akademik Prodi</small></div>
+    <div class="spacer"></div>
+    <button class="ghost" id="menu" type="button">Menu</button>
+    <button class="ghost hide-sm" id="reset" type="button">Percakapan baru</button>
+  </header>
+  <div class="banner" id="banner" role="status" hidden>
+    <div class="isi" id="bannerIsi"></div>
+    <button type="button" id="bannerTutup" aria-label="Tutup pengingat" title="Tutup">×</button>
+  </div>
+
+  <main id="log" aria-live="polite"></main>
+  <div class="chips" id="chips"></div>
+  <div class="tools">
+    <button class="ghost" id="unduh" type="button" disabled
+      title="Simpan percakapan ini ke perangkat Anda">⬇ Unduh Ringkasan Chat</button>
+    <button class="ghost" id="upload" type="button"
+      title="Unggah surat edaran / materi (.txt atau .pdf) untuk ditanyakan">📎 Unggah dokumen</button>
+    <input type="file" id="berkas" accept=".txt,.pdf,text/plain,application/pdf" hidden>
+    <span class="docchip" id="docchip" hidden><span id="docnama"></span>
+      <button type="button" id="dochapus" aria-label="Lepas dokumen" title="Lepas dokumen">×</button></span>
+    <label>format
+      <select id="fmt" aria-label="Format berkas unduhan">
+        <option value="md">.md</option><option value="txt">.txt</option>
+      </select>
+    </label>
+  </div>
+
+  <form id="form">
+    <textarea id="box" rows="1" maxlength="500" placeholder="Tulis pertanyaan akademik Anda..."
+      aria-label="Pertanyaan"></textarea>
+    <button class="send" id="send" type="submit">Kirim</button>
+  </form>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const log = $("log"), box = $("box"), send = $("send"), chips = $("chips");
+  const NAMA = { kb: "Knowledge base", llm: "LLM + KB", fallback: "Fallback", sapaan: "Sapaan", saran: "Saran", alat: "Alat akademik" };
+  let sesi = null, sibuk = false;
+  try { sesi = sessionStorage.getItem("sesi"); } catch (e) {}
+
+  function simpanSesi(s) { sesi = s; try { sessionStorage.setItem("sesi", s); } catch (e) {} }
+
+  // Transkrip percakapan untuk tombol "Unduh Ringkasan Chat" (hanya pesan yang benar-benar dijawab server).
+  let transkrip = [];
+  function catat(peran, teks, extra) {
+    transkrip.push(Object.assign({ peran, teks }, extra || {}));
+    $("unduh").disabled = false;
+  }
+
+  function tombol(label, judul, kelas) {
+    const b = document.createElement("button"); b.type = "button"; b.className = kelas;
+    b.textContent = label; if (judul) { b.title = judul; b.setAttribute("aria-label", judul); }
+    return b;
+  }
+
+  // Quick Reply: tombol pertanyaan lanjutan (angka 1/2/3 yang diketik juga dipahami server).
+  function quick(opsi) {
+    const w = document.createElement("div"); w.className = "quick";
+    const j = document.createElement("div"); j.className = "quick-judul";
+    j.textContent = "Pertanyaan lanjutan (klik, atau ketik angkanya):"; w.appendChild(j);
+    opsi.forEach((o, i) => {
+      const b = tombol((i + 1) + ". " + o, "", "qbtn");
+      b.addEventListener("click", () => kirim(o)); w.appendChild(b);
+    });
+    return w;
+  }
+
+  // Umpan balik 👍 / 👎. Rating 👎 disimpan server ke logs/feedback_negatif.jsonl.
+  function umpan(jawaban, tanya, mode) {
+    const w = document.createElement("div"); w.className = "fb";
+    const up = tombol("👍 Membantu", "Jawaban ini membantu", "fbtn");
+    const down = tombol("👎 Kurang tepat", "Jawaban ini kurang tepat", "fbtn");
+    async function kirimFb(nilai) {
+      up.disabled = down.disabled = true;
+      try {
+        const r = await fetch("/feedback", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nilai, pertanyaan: tanya || "", jawaban, mode }) });
+        if (!r.ok) throw new Error("gagal");
+        w.textContent = nilai === "up" ? "Terima kasih atas umpan baliknya 👍"
+          : "Terima kasih, jawaban ini dicatat untuk perbaikan 👎";
+      } catch (e) {
+        up.disabled = down.disabled = false;
+        const g = w.querySelector(".gagal") || document.createElement("span");
+        g.className = "gagal"; g.textContent = "Gagal mengirim, coba lagi."; w.appendChild(g);
+      }
+    }
+    const salin = tombol("📋 Salin", "Salin jawaban ke papan klip", "fbtn");
+    salin.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(jawaban); salin.textContent = "✓ Tersalin"; }
+      catch (e) {
+        const ta = document.createElement("textarea"); ta.value = jawaban; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand("copy"); salin.textContent = "✓ Tersalin"; } catch (e2) {}
+        ta.remove();
+      }
+      setTimeout(() => { salin.textContent = "📋 Salin"; }, 1800);
+    });
+    up.addEventListener("click", () => kirimFb("up"));
+    down.addEventListener("click", () => kirimFb("down"));
+    w.append(up, down, salin);
+    return w;
+  }
+
+  // Kartu kuis interaktif: klik opsi -> benar/salah + pembahasan; skor muncul setelah semua dijawab.
+  function kuisKartu(soal) {
+    const w = document.createElement("div"); w.className = "kuis";
+    const skor = document.createElement("div"); skor.className = "kq-skor";
+    let benar = 0, dijawab = 0;
+    soal.forEach((s, i) => {
+      const k = document.createElement("div"); k.className = "kq";
+      const t = document.createElement("div"); t.className = "kq-soal"; t.textContent = (i + 1) + ". " + s.soal;
+      const ops = document.createElement("div"); ops.className = "kq-opsi";
+      const pem = document.createElement("div"); pem.className = "kq-pem"; pem.hidden = true;
+      s.opsi.forEach((o, j) => {
+        const b = tombol(String.fromCharCode(65 + j) + ". " + o, "", "qopsi");
+        b.addEventListener("click", () => {
+          if (k.dataset.sudah) return; k.dataset.sudah = "1";
+          ops.querySelectorAll("button").forEach((x, idx) => {
+            x.disabled = true;
+            if (idx === s.jawaban) x.classList.add("benar"); else if (idx === j) x.classList.add("salah");
+          });
+          dijawab++; if (j === s.jawaban) benar++;
+          pem.hidden = false;
+          pem.textContent = (j === s.jawaban ? "✅ Benar. " : "❌ Kurang tepat. Jawaban: "
+            + String.fromCharCode(65 + s.jawaban) + ". ") + (s.pembahasan || "");
+          if (dijawab === soal.length) skor.textContent = "Skor Anda: " + benar + " / " + soal.length;
+        });
+        ops.appendChild(b);
+      });
+      k.append(t, ops, pem); w.appendChild(k);
+    });
+    w.appendChild(skor);
+    return w;
+  }
+
+  function tambah(peran, teks, info, tanya) {
+    const row = document.createElement("div"); row.className = "row " + peran;
+    const b = document.createElement("div"); b.className = "bubble"; b.textContent = teks;
+    row.appendChild(b);
+    if (info) {
+      if (info.kuis && info.kuis.length) row.appendChild(kuisKartu(info.kuis));
+      if (info.opsi_cepat && info.opsi_cepat.length) row.appendChild(quick(info.opsi_cepat));
+      const meta = document.createElement("div"); meta.className = "meta";
+      const badge = document.createElement("span");
+      badge.className = "badge m-" + info.mode; badge.textContent = NAMA[info.mode] || info.mode;
+      meta.appendChild(badge);
+      if (info.model) {
+        const m = document.createElement("span"); m.textContent = "model: " + info.model; meta.appendChild(m);
+      }
+      const t = document.createElement("span");
+      t.textContent = Math.round(info.waktu_ms) + " ms"; meta.appendChild(t);
+      if (info.percobaan && info.percobaan.length > 1) {
+        const f = document.createElement("span");
+        f.textContent = "failover: " + info.percobaan.join(" → "); meta.appendChild(f);
+      }
+      row.appendChild(meta);
+      if (info.sumber && info.sumber.length) {
+        const s = document.createElement("div"); s.className = "src";
+        s.textContent = "Sumber: " + info.sumber.join("; "); row.appendChild(s);
+      }
+      if (info.sesi) row.appendChild(umpan(teks, tanya, info.mode));   // hanya balasan dari server
+    }
+    log.appendChild(row); log.scrollTop = log.scrollHeight;
+    return row;
+  }
+
+  function mengetik() {
+    const row = document.createElement("div"); row.className = "row bot";
+    const b = document.createElement("div"); b.className = "bubble typing";
+    b.innerHTML = "<span></span><span></span><span></span>";
+    b.setAttribute("aria-label", "Sedang mengetik"); row.appendChild(b);
+    log.appendChild(row); log.scrollTop = log.scrollHeight; return row;
+  }
+
+  async function kirim(teks) {
+    teks = teks.trim(); if (!teks || sibuk) return;
+    sibuk = true; send.disabled = true; chips.hidden = true; nonaktifkanQuick();
+    const barisUser = tambah("user", teks); box.value = ""; ukur();
+    const ind = mengetik();
+    try {
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pesan: teks, sesi }) });
+      const d = await r.json();
+      ind.remove();
+      if (!r.ok) { tambah("bot", d.error || "Terjadi kesalahan.", { mode: "fallback", waktu_ms: 0 }); return; }
+      simpanSesi(d.sesi); setSemester(d.semester);
+      const tanya = d.dipilih || teks;                       // "2" -> pertanyaan lengkap yang dipilih
+      if (d.dipilih) barisUser.querySelector(".bubble").textContent = d.dipilih;
+      tambah("bot", d.jawaban, d, tanya);
+      catat("user", tanya); catat("bot", d.jawaban, { sumber: d.sumber, mode: d.mode, kuis: d.kuis });
+      if (d.dokumen !== undefined) setDok(d.dokumen);
+    } catch (e) {
+      ind.remove(); tambah("bot", "Tidak dapat terhubung ke server. Coba lagi.", { mode: "fallback", waktu_ms: 0 });
+    } finally { sibuk = false; send.disabled = false; box.focus(); }
+  }
+
+  function nonaktifkanQuick() {
+    log.querySelectorAll(".quick").forEach((q) => q.classList.add("lama"));   // opsi lama sudah usang
+  }
+
+  let semester = null, infoKb = "";
+  function setSemester(n) {
+    if (n === undefined) return;
+    semester = n; $("status").textContent = infoKb + (n ? " · semester " + n : "");
+  }
+
+  function layar(d) {
+    log.querySelectorAll(".menurow").forEach((r) => r.classList.add("lama"));
+    const row = document.createElement("div"); row.className = "row bot menurow";
+    const box = document.createElement("div"); box.className = "bubble menubox";
+    const j = document.createElement("div"); j.className = "jdl"; j.textContent = d.judul; box.appendChild(j);
+    const t = document.createElement("table"); t.className = "tbl";
+    const hd = document.createElement("tr");
+    d.kolom.forEach((k) => { const th = document.createElement("th"); th.textContent = k; hd.appendChild(th); });
+    t.appendChild(hd);
+    d.opsi.forEach((o) => {
+      const tr = document.createElement("tr");
+      const n = document.createElement("td"); n.className = "no"; n.textContent = o.no;
+      const a = document.createElement("td"); const b = document.createElement("button");
+      b.type = "button"; b.className = "pilih"; b.textContent = o.label;
+      b.addEventListener("click", () => menu(o.jalur, o.label)); a.appendChild(b);
+      const k = document.createElement("td"); k.className = "ket"; k.textContent = o.ket;
+      tr.append(n, a, k); t.appendChild(tr);
+    });
+    box.appendChild(t);
+    const nav = document.createElement("div"); nav.className = "menunav";
+    if (d.jalur.length) {
+      const bk = document.createElement("button"); bk.type = "button"; bk.className = "ghost"; bk.textContent = "Kembali";
+      bk.addEventListener("click", () => menu(d.jalur.slice(0, -1))); nav.appendChild(bk);
+    }
+    box.appendChild(nav); row.appendChild(box); log.appendChild(row); log.scrollTop = log.scrollHeight;
+  }
+
+  async function menu(jalur, label) {
+    if (sibuk) return; sibuk = true; chips.hidden = true; nonaktifkanQuick();
+    try {
+      const r = await fetch("/api/menu", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ jalur: jalur || [], sesi }) });
+      const d = await r.json();
+      if (!r.ok) { tambah("bot", d.error || "Terjadi kesalahan.", { mode: "fallback", waktu_ms: 0 }); return; }
+      simpanSesi(d.sesi); setSemester(d.semester);
+      if (d.tipe === "jawaban") {
+        tambah("user", d.pertanyaan); tambah("bot", d.jawaban, d, d.pertanyaan);
+        catat("user", d.pertanyaan); catat("bot", d.jawaban, { sumber: d.sumber, mode: d.mode });
+        if (d.balik) layar(d.balik);
+      } else {
+        if (d.pesan) tambah("bot", d.pesan);
+        layar(d);
+      }
+    } catch (e) {
+      tambah("bot", "Tidak dapat terhubung ke server. Coba lagi.", { mode: "fallback", waktu_ms: 0 });
+    } finally { sibuk = false; }
+  }
+
+  function ukur() { box.style.height = "auto"; box.style.height = Math.min(box.scrollHeight, 140) + "px"; }
+  function awal() {
+    log.textContent = ""; chips.hidden = false; transkrip = []; $("unduh").disabled = true; setDok(null);
+    tambah("bot", "Halo! Saya AkademikBot. Tanyakan seputar KRS, cuti, skripsi, jadwal kuliah, mata kuliah, dan layanan akademik lainnya, atau tekan tombol Menu untuk memilih dari tabel tanpa mengetik.");
+  }
+
+  $("form").addEventListener("submit", (e) => { e.preventDefault(); kirim(box.value); });
+  box.addEventListener("input", ukur);
+  box.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); kirim(box.value); }
+  });
+  // -- Ekspor ringkasan chat (dibuat di browser; tidak ada data yang dikirim ke server) --------------
+  function bangunRingkasan(fmt) {
+    const waktu = new Date().toLocaleString("id-ID", { dateStyle: "long", timeStyle: "short" });
+    const md = fmt === "md", L = [];
+    L.push(md ? "# Ringkasan Konsultasi Akademik - AkademikBot" : "RINGKASAN KONSULTASI AKADEMIK - AkademikBot");
+    L.push("");
+    L.push((md ? "- **Tanggal**: " : "Tanggal  : ") + waktu);
+    if (semester) L.push((md ? "- **Semester**: " : "Semester : ") + semester);
+    L.push((md ? "- **Jumlah pertanyaan**: " : "Pertanyaan: ") + transkrip.filter((t) => t.peran === "user").length);
+    L.push("");
+    L.push(md ? "---" : "------------------------------------------------------------");
+    L.push("");
+    transkrip.forEach((t) => {
+      const nama = t.peran === "user" ? "Anda" : "AkademikBot";
+      L.push(md ? "### " + nama : "[" + nama + "]");
+      L.push(t.teks);
+      if (t.kuis && t.kuis.length) {
+        L.push("");
+        t.kuis.forEach((s, i) => {
+          L.push((i + 1) + ". " + s.soal);
+          s.opsi.forEach((o, j) => L.push("   " + String.fromCharCode(65 + j) + ". " + o));
+          L.push("   Kunci: " + String.fromCharCode(65 + s.jawaban) + (s.pembahasan ? " - " + s.pembahasan : ""));
+        });
+      }
+      if (t.sumber && t.sumber.length) L.push(""), L.push((md ? "> Sumber: " : "Sumber: ") + t.sumber.join("; "));
+      L.push("");
+    });
+    L.push(md ? "---" : "------------------------------------------------------------");
+    L.push((md ? "_" : "") + "Ringkasan dibuat otomatis oleh AkademikBot. Untuk keputusan penting, pastikan kembali ke "
+      + "sumber resmi Prodi / sekretariat." + (md ? "_" : ""));
+    return L.join("\n") + "\n";
+  }
+
+  function unduh() {
+    if (!transkrip.length) return;
+    const fmt = $("fmt").value === "txt" ? "txt" : "md";
+    const d = new Date(), p = (n) => String(n).padStart(2, "0");
+    const nama = "ringkasan_akademikbot_" + d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate())
+      + "_" + p(d.getHours()) + p(d.getMinutes()) + "." + fmt;
+    const blob = new Blob([bangunRingkasan(fmt)],
+      { type: (fmt === "md" ? "text/markdown" : "text/plain") + ";charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = nama; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+  }
+  $("unduh").addEventListener("click", unduh);
+
+  // -- Dokumen unggahan (TXT/PDF) -> konteks tanya-jawab sesi ini ---------------------------------
+  let maksMb = 2, pdfOk = true;
+  function setDok(nama) {
+    $("docchip").hidden = !nama; $("docnama").textContent = nama ? "📄 " + nama : "";
+    $("upload").hidden = !!nama;
+  }
+  function pesanBot(teks) { tambah("bot", teks, { mode: "alat", waktu_ms: 0 }); }
+  $("upload").addEventListener("click", () => $("berkas").click());
+  $("berkas").addEventListener("change", () => {
+    const f = $("berkas").files[0]; $("berkas").value = ""; if (!f) return;
+    if (f.size > maksMb * 1024 * 1024) { pesanBot("Berkas terlalu besar (maks " + maksMb + " MB)."); return; }
+    if (/\.pdf$/i.test(f.name) && !pdfOk) {
+      pesanBot("Server belum bisa membaca PDF (paket pypdf belum terpasang). Simpan sebagai .txt lalu unggah."); return;
+    }
+    const rd = new FileReader();
+    rd.onload = async () => {
+      const b64 = String(rd.result).split(",")[1] || "";
+      $("upload").disabled = true;
+      try {
+        const r = await fetch("/api/dokumen", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sesi, nama: f.name, data: b64 }) });
+        const d = await r.json();
+        if (d.sesi) simpanSesi(d.sesi);
+        if (!r.ok) { pesanBot("Dokumen tidak dapat dipakai: " + (d.error || "terjadi kesalahan.")); return; }
+        setDok(d.nama);
+        pesanBot("Dokumen \"" + d.nama + "\" dimuat (" + d.karakter + " karakter, " + d.potongan
+          + " bagian). Silakan bertanya tentang isinya, atau minta \"buatkan 3 soal latihan dari dokumen\". "
+          + "Dokumen hanya disimpan sementara di sesi ini.");
+      } catch (e) { pesanBot("Tidak dapat mengunggah dokumen. Coba lagi."); }
+      finally { $("upload").disabled = false; }
+    };
+    rd.onerror = () => pesanBot("Berkas tidak dapat dibaca.");
+    rd.readAsDataURL(f);
+  });
+  $("dochapus").addEventListener("click", async () => {
+    setDok(null);
+    if (sesi) fetch("/api/dokumen/hapus", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sesi }) }).catch(() => {});
+    pesanBot("Dokumen dilepas. Pertanyaan kembali dijawab dari knowledge base.");
+  });
+
+  // -- Banner pengingat kalender akademik ----------------------------------------------------------
+  function muatBanner() {
+    let tutup = null; try { tutup = sessionStorage.getItem("bannerTutup"); } catch (e) {}
+    fetch("/api/banner").then((r) => r.json()).then((d) => {
+      if (!d.banner || !d.banner.length) return;
+      const kunci = d.banner.map((b) => b.teks).join("|"); if (tutup === kunci) return;
+      const isi = $("bannerIsi"); isi.textContent = "";
+      d.banner.forEach((b) => { const x = document.createElement("div"); x.textContent = b.teks + " (" + b.tanggal + ")";
+        isi.appendChild(x); });
+      if (d.dummy) { const c = document.createElement("div"); c.className = "cat";
+        c.textContent = "Tanggal contoh, belum resmi."; isi.appendChild(c); }
+      $("banner").hidden = false;
+      $("bannerTutup").onclick = () => { $("banner").hidden = true;
+        try { sessionStorage.setItem("bannerTutup", kunci); } catch (e) {} };
+    }).catch(() => {});
+  }
+  muatBanner();
+
+  $("menu").addEventListener("click", () => menu([]));
+  $("reset").addEventListener("click", async () => {
+    const lama = sesi; sesi = null; semester = null; try { sessionStorage.removeItem("sesi"); } catch (e) {}
+    if (lama) fetch("/api/reset", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sesi: lama }) }).catch(() => {});
+    awal();
+  });
+
+  fetch("/api/health").then((r) => r.json()).then((h) => {
+    maksMb = h.maks_dokumen_mb || 2; pdfOk = h.pdf !== false;
+    infoKb = h.entri_kb + " topik" + (h.llm ? " · LLM aktif" : " · mode offline");
+    $("status").textContent = infoKb + (semester ? " · semester " + semester : "");
+  }).catch(() => {});
+  fetch("/api/topik").then((r) => r.json()).then((d) => {
+    d.topik.slice(0, 6).forEach((t) => {
+      const c = document.createElement("button"); c.type = "button"; c.className = "chip";
+      c.textContent = t.pertanyaan; c.addEventListener("click", () => kirim(t.pertanyaan));
+      chips.appendChild(c);
+    });
+  }).catch(() => {});
+  awal(); box.focus();
+})();
+</script>
+</body>
+</html>

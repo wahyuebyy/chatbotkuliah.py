@@ -1,0 +1,6 @@
+{
+  "_catatan": "Metadata jadwal.csv. Ubah \"dummy\" menjadi false setelah jadwal.csv diisi data asli, lalu jalankan: python main.py --cek-data",
+  "tahun_ajaran": "2026/2027 Ganjil",
+  "dummy": true,
+  "sumber": "DUMMY - jadwal contoh, ganti dengan jadwal resmi (SIAKAD/Prodi)"
+}

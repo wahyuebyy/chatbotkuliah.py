@@ -1,0 +1,599 @@
+{
+  "_catatan": "Set uji untuk mengevaluasi router. 'jalur' = keputusan harapan: kb | llm | fallback | sapaan. 'entri' (opsional) = id entri KB teratas yang diharapkan pada jalur kb. Kasus bertanda heldout=true ditulis SETELAH tuning threshold selesai, dipakai sebagai uji yang lebih jujur.",
+  "kasus": [
+    {
+      "q": "Bagaimana cara mengisi KRS?",
+      "jalur": "kb",
+      "entri": "krs-01"
+    },
+    {
+      "q": "kapan pengisian KRS dibuka",
+      "jalur": "kb",
+      "entri": "krs-01"
+    },
+    {
+      "q": "gimana registrasi mata kuliah online",
+      "jalur": "kb",
+      "entri": "krs-01"
+    },
+    {
+      "q": "langkah-langkah mengisi KRS",
+      "jalur": "kb",
+      "entri": "krs-01"
+    },
+    {
+      "q": "berapa sks maksimal per semester",
+      "jalur": "kb",
+      "entri": "sks-01"
+    },
+    {
+      "q": "maksimal sks yang boleh diambil",
+      "jalur": "kb",
+      "entri": "sks-01"
+    },
+    {
+      "q": "bagaimana prosedur cuti akademik",
+      "jalur": "kb",
+      "entri": "cuti-01"
+    },
+    {
+      "q": "gmn cara cuti kuliah?",
+      "jalur": "kb",
+      "entri": "cuti-01"
+    },
+    {
+      "q": "Apa saja syarat cuti akademik?",
+      "jalur": "kb",
+      "entri": "cuti-01"
+    },
+    {
+      "q": "Halo, bagaimana cara cuti?",
+      "jalur": "kb",
+      "entri": "cuti-01"
+    },
+    {
+      "q": "terima kasih, tapi bagaimana cara cuti?",
+      "jalur": "kb",
+      "entri": "cuti-01"
+    },
+    {
+      "q": "syarat mengajukan skripsi",
+      "jalur": "kb",
+      "entri": "skripsi-01"
+    },
+    {
+      "q": "kapan boleh ambil skripsi",
+      "jalur": "kb",
+      "entri": "skripsi-01"
+    },
+    {
+      "q": "ujian susulan kalau sakit",
+      "jalur": "kb",
+      "entri": "ujian-01"
+    },
+    {
+      "q": "cara menghitung IPK",
+      "jalur": "kb",
+      "entri": "nilai-01"
+    },
+    {
+      "q": "bagaimana cara daftar beasiswa",
+      "jalur": "kb",
+      "entri": "beasiswa-01"
+    },
+    {
+      "q": "cara minta surat keterangan aktif kuliah",
+      "jalur": "kb",
+      "entri": "legalisir-01"
+    },
+    {
+      "q": "siapa dosen PA saya",
+      "jalur": "kb",
+      "entri": "pa-01"
+    },
+    {
+      "q": "kontak sekretariat prodi",
+      "jalur": "kb",
+      "entri": "kontak-01"
+    },
+    {
+      "q": "kapan jadwal UTS",
+      "jalur": "kb",
+      "entri": "kalender-01"
+    },
+    {
+      "q": "prosedur kerja praktik",
+      "jalur": "kb",
+      "entri": "magang-01"
+    },
+    {
+      "q": "syarat daftar sidang dan wisuda",
+      "jalur": "kb",
+      "entri": "sidang-01"
+    },
+    {
+      "q": "nilai E bisa mengulang?",
+      "jalur": "kb",
+      "entri": "mengulang-01"
+    },
+    {
+      "q": "batas maksimal masa studi",
+      "jalur": "kb",
+      "entri": "batasstudi-01"
+    },
+    {
+      "q": "Saya sakit waktu UTS, terus syarat skripsi juga apa saja dan bagaimana kalau mau cuti?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Bandingkan cuti akademik dengan tidak mengisi KRS, apa bedanya?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Kalau saya cuti, apakah SKS semester depan dan beasiswa saya terpengaruh?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Apakah nilai E mempengaruhi syarat skripsi dan IPK saya?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Saya mau ambil magang sekaligus skripsi semester ini, boleh?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Cara mengisi KRS dan tugas dosen PA apa saja?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Setelah lulus sidang, apa yang harus diurus untuk wisuda dan surat keterangan lulus?",
+      "jalur": "llm"
+    },
+    {
+      "q": "Berapa biaya UKT semester depan?",
+      "jalur": "fallback"
+    },
+    {
+      "q": "Siapa presiden Indonesia pertama?",
+      "jalur": "fallback"
+    },
+    {
+      "q": "resep nasi goreng enak",
+      "jalur": "fallback"
+    },
+    {
+      "q": "cara install python di windows",
+      "jalur": "fallback"
+    },
+    {
+      "q": "Berapa gaji dosen?",
+      "jalur": "fallback"
+    },
+    {
+      "q": "bagaimana cara pindah prodi?",
+      "jalur": "fallback"
+    },
+    {
+      "q": "jam buka perpustakaan",
+      "jalur": "fallback"
+    },
+    {
+      "q": "asdfgh qwerty",
+      "jalur": "fallback"
+    },
+    {
+      "q": "Halo",
+      "jalur": "sapaan"
+    },
+    {
+      "q": "Selamat pagi",
+      "jalur": "sapaan"
+    },
+    {
+      "q": "terima kasih banyak",
+      "jalur": "sapaan"
+    },
+    {
+      "q": "Makasih ya",
+      "jalur": "sapaan"
+    },
+    {
+      "q": "tata cara registrasi KRS online",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "krs-01"
+    },
+    {
+      "q": "berapa batas SKS yang bisa saya ambil",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "sks-01"
+    },
+    {
+      "q": "mau ajukan cuti kuliah semester depan",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "cuti-01"
+    },
+    {
+      "q": "persyaratan proposal tugas akhir",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "skripsi-01"
+    },
+    {
+      "q": "tidak hadir UAS karena sakit bagaimana",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "ujian-01"
+    },
+    {
+      "q": "rumus IPS dan IPK",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "nilai-01"
+    },
+    {
+      "q": "info pendaftaran beasiswa",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "beasiswa-01"
+    },
+    {
+      "q": "kapan wisuda dan berkas yang disiapkan",
+      "jalur": "kb",
+      "heldout": true,
+      "entri": "sidang-01"
+    },
+    {
+      "q": "bagaimana cara bayar SPP lewat bank",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "rekomendasi laptop untuk kuliah",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "kapan libur lebaran nasional",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "Apa beda cuti akademik dan perpanjangan studi, dan apakah keduanya mempengaruhi beasiswa?",
+      "jalur": "llm",
+      "heldout": true
+    },
+    {
+      "q": "syarat skrispi apa saja",
+      "jalur": "kb",
+      "entri": "skripsi-01"
+    },
+    {
+      "q": "gmn cra mendaftar benasiswa",
+      "jalur": "kb",
+      "entri": "beasiswa-01"
+    },
+    {
+      "q": "prosedur wisdua dan yudisium",
+      "jalur": "kb",
+      "entri": "sidang-01",
+      "heldout": true
+    },
+    {
+      "q": "bagaimana cara bayar spp",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "jadwal parkir kampus",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "berapa persen kehadiran minimal supaya bisa ikut UAS",
+      "jalur": "kb",
+      "entri": "presensi-01",
+      "heldout": true
+    },
+    {
+      "q": "kalau saya sering absen masih boleh ujian akhir ga",
+      "jalur": "kb",
+      "entri": "presensi-01",
+      "heldout": true
+    },
+    {
+      "q": "nilai saya salah, gimana cara komplain ke dosen",
+      "jalur": "kb",
+      "entri": "sanggah-01",
+      "heldout": true
+    },
+    {
+      "q": "prosedur sanggah nilai akhir",
+      "jalur": "kb",
+      "entri": "sanggah-01",
+      "heldout": true
+    },
+    {
+      "q": "ktm saya hilang harus bagaimana",
+      "jalur": "kb",
+      "entri": "ktm-01",
+      "heldout": true
+    },
+    {
+      "q": "cara cetak ulang kartu mahasiswa yang rusak",
+      "jalur": "kb",
+      "entri": "ktm-01",
+      "heldout": true
+    },
+    {
+      "q": "lupa password e-learning gimana reset nya",
+      "jalur": "kb",
+      "entri": "elearning-01",
+      "heldout": true
+    },
+    {
+      "q": "tidak bisa login akun sistem akademik",
+      "jalur": "kb",
+      "entri": "elearning-01",
+      "heldout": true
+    },
+    {
+      "q": "aturan praktikum di laboratorium",
+      "jalur": "kb",
+      "entri": "lab-01",
+      "heldout": true
+    },
+    {
+      "q": "kalau tidak ikut praktikum bagaimana",
+      "jalur": "kb",
+      "entri": "lab-01",
+      "heldout": true
+    },
+    {
+      "q": "cara daftar ukm kampus",
+      "jalur": "kb",
+      "entri": "ukm-01",
+      "heldout": true
+    },
+    {
+      "q": "mau ikut himpunan mahasiswa",
+      "jalur": "kb",
+      "entri": "ukm-01",
+      "heldout": true
+    },
+    {
+      "q": "bagaimana ikut program MBKM",
+      "jalur": "kb",
+      "entri": "mbkm-01",
+      "heldout": true
+    },
+    {
+      "q": "konversi sks kegiatan merdeka belajar",
+      "jalur": "kb",
+      "entri": "mbkm-01",
+      "heldout": true
+    },
+    {
+      "q": "apakah wajib punya sertifikat TOEFL untuk yudisium",
+      "jalur": "kb",
+      "entri": "toefl-01",
+      "heldout": true
+    },
+    {
+      "q": "skor bahasa inggris minimal untuk lulus",
+      "jalur": "kb",
+      "entri": "toefl-01",
+      "heldout": true
+    },
+    {
+      "q": "batas plagiarisme skripsi berapa persen",
+      "jalur": "kb",
+      "entri": "plagiat-01",
+      "heldout": true
+    },
+    {
+      "q": "cek similarity turnitin tugas akhir",
+      "jalur": "kb",
+      "entri": "plagiat-01",
+      "heldout": true
+    },
+    {
+      "q": "minimal berapa kali bimbingan skripsi",
+      "jalur": "kb",
+      "entri": "bimbingan-01",
+      "heldout": true
+    },
+    {
+      "q": "lembar bimbingan tugas akhir",
+      "jalur": "kb",
+      "entri": "bimbingan-01",
+      "heldout": true
+    },
+    {
+      "q": "cara minta surat rekomendasi dosen",
+      "jalur": "kb",
+      "entri": "rekomendasi-01",
+      "heldout": true
+    },
+    {
+      "q": "format permohonan surat rekomendasi untuk beasiswa",
+      "jalur": "kb",
+      "entri": "rekomendasi-01",
+      "heldout": true
+    },
+    {
+      "q": "daftar lomba mewakili kampus dapat dana",
+      "jalur": "kb",
+      "entri": "prestasi-01",
+      "heldout": true
+    },
+    {
+      "q": "pendanaan mengikuti kompetisi mahasiswa",
+      "jalur": "kb",
+      "entri": "prestasi-01",
+      "heldout": true
+    },
+    {
+      "q": "ada layanan konseling untuk mahasiswa?",
+      "jalur": "kb",
+      "entri": "konseling-01",
+      "heldout": true
+    },
+    {
+      "q": "saya butuh konsultasi psikologi",
+      "jalur": "kb",
+      "entri": "konseling-01",
+      "heldout": true
+    },
+    {
+      "q": "nama saya salah tulis di data mahasiswa",
+      "jalur": "kb",
+      "entri": "datadiri-01",
+      "heldout": true
+    },
+    {
+      "q": "cara ganti alamat dan nomor telepon di sistem akademik",
+      "jalur": "kb",
+      "entri": "datadiri-01",
+      "heldout": true
+    },
+    {
+      "q": "dosen tidak hadir apa ada kelas pengganti",
+      "jalur": "kb",
+      "entri": "kelas-01",
+      "heldout": true
+    },
+    {
+      "q": "kuliah dibatalkan, jadwal penggantinya bagaimana",
+      "jalur": "kb",
+      "entri": "kelas-01",
+      "heldout": true
+    },
+    {
+      "q": "minimal berapa sks untuk ambil kerja praktik",
+      "jalur": "kb",
+      "entri": "magangsyarat-01",
+      "heldout": true
+    },
+    {
+      "q": "kapan boleh mulai magang",
+      "jalur": "kb",
+      "entri": "magangsyarat-01",
+      "heldout": true
+    },
+    {
+      "q": "Kalau dosen tidak hadir dan presensi saya kurang dari batas, apakah masih boleh ikut UAS?",
+      "jalur": "llm",
+      "heldout": true
+    },
+    {
+      "q": "Saya mau kerja praktik, apa syarat SKS-nya dan bagaimana bimbingan skripsi nanti?",
+      "jalur": "llm",
+      "heldout": true
+    },
+    {
+      "q": "Bagaimana cara ikut MBKM dan apakah perlu sertifikat TOEFL untuk yudisium?",
+      "jalur": "llm",
+      "heldout": true
+    },
+    {
+      "q": "berapa biaya wifi kampus",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "siapa rektor universitas sekarang",
+      "jalur": "fallback",
+      "heldout": true
+    },
+    {
+      "q": "jadwal kuliah semester 3",
+      "jalur": "kb",
+      "entri": "jadwal-s3"
+    },
+    {
+      "q": "jadwal hari senin semester 3",
+      "jalur": "kb",
+      "entri": "jadwal-s3-senin"
+    },
+    {
+      "q": "jadwal selasa semester 5",
+      "jalur": "kb",
+      "entri": "jadwal-s5-selasa"
+    },
+    {
+      "q": "kuliah apa hari kamis semester 1",
+      "jalur": "kb",
+      "entri": "jadwal-s1-kamis"
+    },
+    {
+      "q": "mata kuliah apa saja di semester 5",
+      "jalur": "kb",
+      "entri": "sem-5"
+    },
+    {
+      "q": "daftar matkul semester 8",
+      "jalur": "kb",
+      "entri": "sem-8"
+    },
+    {
+      "q": "berapa sks sistem operasi",
+      "jalur": "kb",
+      "entri": "mk-INF.62.0014"
+    },
+    {
+      "q": "dosen pengampu jaringan komputer",
+      "jalur": "kb",
+      "entri": "mk-INF.62.0015"
+    },
+    {
+      "q": "kode mata kuliah kriptografi",
+      "jalur": "kb",
+      "entri": "mk-INF.62.0028"
+    },
+    {
+      "q": "bahasa jepang berapa sks",
+      "jalur": "kb",
+      "entri": "mk-UNP.60.0008"
+    },
+    {
+      "q": "ruang kuliah pemrograman web",
+      "jalur": "kb",
+      "entri": "mk-INF.62.0011"
+    },
+    {
+      "q": "sistem operasi semester berapa",
+      "jalur": "kb",
+      "entri": "mk-INF.62.0014"
+    },
+    {
+      "q": "jam kuliah pertama",
+      "jalur": "kb",
+      "entri": "jamkuliah-01"
+    },
+    {
+      "q": "total sks tiap semester",
+      "jalur": "kb",
+      "entri": "kurikulum-ringkasan"
+    },
+    {
+      "q": "dimana lab jaringan",
+      "jalur": "kb",
+      "entri": "gedung-01"
+    },
+    {
+      "q": "Bandingkan beban SKS semester 4 dan semester 6",
+      "jalur": "llm"
+    },
+    {
+      "q": "Siapa dosen Sistem Operasi dan jadwal semester 3 hari Selasa?",
+      "jalur": "llm"
+    },
+    {
+      "q": "cuaca hari ini di padang",
+      "jalur": "fallback"
+    }
+  ]
+}

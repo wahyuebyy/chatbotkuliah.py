@@ -293,6 +293,310 @@
       ],
       "jawaban": "Batas maksimal masa studi ditetapkan dalam Panduan Akademik dan dievaluasi secara berkala oleh Prodi. Mahasiswa yang mendekati batas tersebut dianjurkan berkonsultasi dengan Dosen PA mengenai rencana penyelesaian studi.",
       "sumber": "Panduan Akademik - Bab Status Mahasiswa"
+    },
+    {
+      "id": "presensi-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Berapa batas minimal kehadiran agar boleh mengikuti UAS?",
+      "variasi": [
+        "syarat kehadiran kuliah",
+        "persentase presensi minimal",
+        "kalau sering absen apakah boleh ikut ujian akhir"
+      ],
+      "kata_kunci": [
+        "presensi",
+        "kehadiran",
+        "absen",
+        "minimal",
+        "uas"
+      ],
+      "jawaban": "Mahasiswa wajib hadir minimal 75% dari total pertemuan tatap muka tiap mata kuliah agar boleh mengikuti UAS. Ketidakhadiran karena sakit atau tugas kampus dapat dicatat sebagai izin bila disertai surat resmi yang diserahkan ke dosen pengampu.",
+      "sumber": "Panduan Akademik - Bab Perkuliahan"
+    },
+    {
+      "id": "sanggah-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana cara mengajukan sanggahan atau komplain nilai?",
+      "variasi": [
+        "nilai saya salah input",
+        "protes nilai mata kuliah",
+        "revisi nilai akhir ke dosen"
+      ],
+      "kata_kunci": [
+        "sanggah",
+        "komplain",
+        "revisi nilai",
+        "nilai akhir",
+        "protes"
+      ],
+      "jawaban": "Sanggahan nilai diajukan secara tertulis kepada dosen pengampu paling lambat 7 hari kerja setelah nilai diumumkan, disertai bukti pendukung seperti lembar jawaban atau rekap tugas. Jika belum selesai, mahasiswa dapat meneruskan ke Ketua Prodi.",
+      "sumber": "Panduan Akademik - Bab Penilaian"
+    },
+    {
+      "id": "ktm-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Bagaimana jika kartu tanda mahasiswa (KTM) hilang atau rusak?",
+      "variasi": [
+        "ktm hilang",
+        "cara mengganti kartu mahasiswa",
+        "cetak ulang ktm"
+      ],
+      "kata_kunci": [
+        "ktm",
+        "kartu mahasiswa",
+        "hilang",
+        "rusak",
+        "cetak ulang"
+      ],
+      "jawaban": "Laporkan kehilangan ke bagian akademik fakultas dengan membawa surat keterangan kehilangan dari kepolisian, fotokopi identitas, dan pas foto terbaru. Penerbitan KTM pengganti umumnya memerlukan waktu beberapa hari kerja.",
+      "sumber": "Layanan Administrasi Mahasiswa"
+    },
+    {
+      "id": "elearning-01",
+      "kategori": "Informasi Umum",
+      "pertanyaan": "Bagaimana cara masuk ke e-learning atau reset kata sandi akun kampus?",
+      "variasi": [
+        "lupa password akun akademik",
+        "tidak bisa login e-learning",
+        "reset sandi sistem informasi akademik"
+      ],
+      "kata_kunci": [
+        "e-learning",
+        "password",
+        "kata sandi",
+        "login",
+        "akun"
+      ],
+      "jawaban": "Masuk ke e-learning memakai akun kampus yang sama dengan sistem informasi akademik. Jika lupa kata sandi, gunakan menu lupa kata sandi pada halaman login atau hubungi unit teknologi informasi kampus dengan membawa KTM.",
+      "sumber": "Panduan Layanan Teknologi Informasi"
+    },
+    {
+      "id": "lab-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana aturan penggunaan laboratorium dan praktikum?",
+      "variasi": [
+        "jadwal praktikum lab komputer",
+        "peraturan masuk laboratorium",
+        "kalau tidak ikut praktikum bagaimana"
+      ],
+      "kata_kunci": [
+        "lab",
+        "laboratorium",
+        "praktikum",
+        "asisten",
+        "modul"
+      ],
+      "jawaban": "Praktikum diikuti sesuai kelas yang terdaftar di KRS dan wajib mengikuti tata tertib laboratorium. Ketidakhadiran praktikum harus diberitahukan kepada asisten atau dosen pengampu sebelum sesi dimulai agar dapat dijadwalkan praktikum pengganti.",
+      "sumber": "Tata Tertib Laboratorium Prodi"
+    },
+    {
+      "id": "ukm-01",
+      "kategori": "Kemahasiswaan",
+      "pertanyaan": "Bagaimana cara bergabung dengan organisasi atau UKM mahasiswa?",
+      "variasi": [
+        "daftar ukm kampus",
+        "ikut himpunan mahasiswa",
+        "kegiatan organisasi kemahasiswaan"
+      ],
+      "kata_kunci": [
+        "ukm",
+        "organisasi",
+        "himpunan",
+        "kemahasiswaan",
+        "pendaftaran anggota"
+      ],
+      "jawaban": "Pendaftaran anggota organisasi dan UKM dibuka pada awal semester ganjil melalui pengumuman bagian kemahasiswaan. Mahasiswa mengisi formulir dan mengikuti seleksi atau pengenalan dari masing-masing organisasi.",
+      "sumber": "Pengumuman Kemahasiswaan"
+    },
+    {
+      "id": "mbkm-01",
+      "kategori": "Kemahasiswaan",
+      "pertanyaan": "Bagaimana ikut program MBKM atau pertukaran pelajar?",
+      "variasi": [
+        "program merdeka belajar kampus merdeka",
+        "studi di kampus lain satu semester",
+        "konversi sks kegiatan di luar kampus"
+      ],
+      "kata_kunci": [
+        "mbkm",
+        "merdeka belajar",
+        "pertukaran",
+        "konversi",
+        "sks"
+      ],
+      "jawaban": "Program MBKM diikuti dengan mendaftar pada periode yang diumumkan Prodi, lalu menyusun rencana studi bersama Dosen PA. Kegiatan yang disetujui dapat dikonversi menjadi SKS mata kuliah sesuai ketentuan Prodi.",
+      "sumber": "Pedoman MBKM Prodi"
+    },
+    {
+      "id": "toefl-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Apakah ada syarat sertifikat bahasa Inggris atau TOEFL untuk lulus?",
+      "variasi": [
+        "skor toefl minimal",
+        "tes kemampuan bahasa inggris",
+        "sertifikat bahasa untuk yudisium"
+      ],
+      "kata_kunci": [
+        "toefl",
+        "bahasa inggris",
+        "sertifikat",
+        "skor",
+        "kelulusan"
+      ],
+      "jawaban": "Mahasiswa diwajibkan memiliki sertifikat kemampuan bahasa Inggris dengan skor minimal yang ditetapkan Prodi sebagai salah satu syarat yudisium. Sertifikat harus masih berlaku dan diunggah saat pendaftaran yudisium.",
+      "sumber": "Pedoman Kelulusan Prodi"
+    },
+    {
+      "id": "plagiat-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Berapa batas kemiripan (plagiarisme) yang diizinkan pada skripsi?",
+      "variasi": [
+        "cek similarity skripsi",
+        "turnitin tugas akhir",
+        "aturan plagiarisme laporan akhir"
+      ],
+      "kata_kunci": [
+        "plagiarisme",
+        "similarity",
+        "turnitin",
+        "kemiripan",
+        "skripsi"
+      ],
+      "jawaban": "Naskah skripsi wajib melewati pemeriksaan kemiripan sebelum sidang, dengan batas kemiripan maksimal 25%. Naskah yang melebihi batas harus direvisi dan diperiksa ulang bersama dosen pembimbing.",
+      "sumber": "Pedoman Tugas Akhir Prodi"
+    },
+    {
+      "id": "bimbingan-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Berapa kali bimbingan skripsi yang harus dilakukan?",
+      "variasi": [
+        "jumlah minimal bimbingan tugas akhir",
+        "frekuensi konsultasi dengan dosen pembimbing",
+        "lembar bimbingan skripsi"
+      ],
+      "kata_kunci": [
+        "bimbingan",
+        "konsultasi",
+        "pembimbing",
+        "lembar bimbingan",
+        "skripsi"
+      ],
+      "jawaban": "Mahasiswa wajib melakukan bimbingan minimal 8 kali dengan dosen pembimbing, dan setiap pertemuan dicatat serta ditandatangani pada lembar bimbingan. Lembar bimbingan yang lengkap menjadi syarat pendaftaran sidang.",
+      "sumber": "Pedoman Tugas Akhir Prodi"
+    },
+    {
+      "id": "rekomendasi-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Bagaimana meminta surat rekomendasi dari dosen?",
+      "variasi": [
+        "surat rekomendasi untuk beasiswa atau magang",
+        "minta rekomendasi dosen pa",
+        "format permohonan surat rekomendasi"
+      ],
+      "kata_kunci": [
+        "rekomendasi",
+        "surat rekomendasi",
+        "permohonan",
+        "dosen",
+        "keperluan"
+      ],
+      "jawaban": "Ajukan permohonan kepada dosen terkait dengan menyebutkan tujuan rekomendasi, batas waktu, dan melampirkan CV serta transkrip nilai. Sebaiknya diajukan minimal 7 hari kerja sebelum batas pengumpulan.",
+      "sumber": "Layanan Administrasi Mahasiswa"
+    },
+    {
+      "id": "prestasi-01",
+      "kategori": "Kemahasiswaan",
+      "pertanyaan": "Bagaimana mendaftar lomba dan mendapat dukungan dana prestasi?",
+      "variasi": [
+        "pendanaan mengikuti kompetisi",
+        "daftar lomba mewakili kampus",
+        "penghargaan mahasiswa berprestasi"
+      ],
+      "kata_kunci": [
+        "lomba",
+        "kompetisi",
+        "prestasi",
+        "pendanaan",
+        "mewakili"
+      ],
+      "jawaban": "Mahasiswa yang akan mengikuti lomba mengajukan proposal singkat beserta surat undangan lomba ke bagian kemahasiswaan. Dukungan dana diberikan sesuai ketersediaan anggaran dan hasil seleksi proposal.",
+      "sumber": "Pengumuman Kemahasiswaan"
+    },
+    {
+      "id": "konseling-01",
+      "kategori": "Kemahasiswaan",
+      "pertanyaan": "Apakah ada layanan konseling untuk mahasiswa?",
+      "variasi": [
+        "konsultasi masalah pribadi atau studi",
+        "bimbingan konseling kampus",
+        "layanan psikologi mahasiswa"
+      ],
+      "kata_kunci": [
+        "konseling",
+        "psikologi",
+        "konsultasi",
+        "masalah pribadi",
+        "layanan"
+      ],
+      "jawaban": "Layanan konseling tersedia bagi mahasiswa untuk masalah studi maupun pribadi dan dapat dijadwalkan melalui bagian kemahasiswaan. Informasi yang disampaikan dijaga kerahasiaannya oleh konselor.",
+      "sumber": "Layanan Kemahasiswaan"
+    },
+    {
+      "id": "datadiri-01",
+      "kategori": "Administrasi",
+      "pertanyaan": "Bagaimana mengubah data pribadi seperti nama atau alamat di sistem akademik?",
+      "variasi": [
+        "salah penulisan nama di data mahasiswa",
+        "ganti alamat atau nomor telepon",
+        "perbaikan data diri akademik"
+      ],
+      "kata_kunci": [
+        "data pribadi",
+        "ubah data",
+        "nama",
+        "alamat",
+        "perbaikan"
+      ],
+      "jawaban": "Perubahan alamat dan nomor telepon dapat dilakukan sendiri melalui profil sistem akademik. Perbaikan nama atau tanggal lahir diajukan ke bagian akademik fakultas dengan melampirkan dokumen pendukung seperti akta kelahiran atau kartu keluarga.",
+      "sumber": "Layanan Administrasi Mahasiswa"
+    },
+    {
+      "id": "kelas-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Apa yang terjadi jika dosen tidak hadir atau kuliah dibatalkan?",
+      "variasi": [
+        "kelas pengganti kuliah",
+        "dosen berhalangan mengajar",
+        "perkuliahan diganti pertemuan lain"
+      ],
+      "kata_kunci": [
+        "kelas pengganti",
+        "dosen berhalangan",
+        "kuliah dibatalkan",
+        "pertemuan",
+        "jadwal pengganti"
+      ],
+      "jawaban": "Jika dosen berhalangan, pertemuan diganti pada jadwal pengganti yang diumumkan melalui e-learning atau perwakilan kelas. Pertemuan yang dibatalkan tidak mengurangi jumlah pertemuan wajib dalam satu semester.",
+      "sumber": "Panduan Akademik - Bab Perkuliahan"
+    },
+    {
+      "id": "magangsyarat-01",
+      "kategori": "Tugas Akhir",
+      "pertanyaan": "Berapa SKS minimal sebelum boleh mengambil kerja praktik?",
+      "variasi": [
+        "syarat ikut kerja praktik",
+        "kapan boleh mulai magang",
+        "batas sks untuk kp"
+      ],
+      "kata_kunci": [
+        "kerja praktik",
+        "magang",
+        "syarat",
+        "sks minimal",
+        "kp"
+      ],
+      "jawaban": "Kerja praktik dapat diambil setelah mahasiswa menempuh minimal 100 SKS tanpa nilai E pada mata kuliah wajib. Mahasiswa mengajukan tempat dan proposal kerja praktik kepada koordinator kerja praktik Prodi.",
+      "sumber": "Pedoman Kerja Praktik Prodi"
     }
   ]
 }

@@ -6,10 +6,10 @@ gabungkan Anggota 1 + 2 atau 3 + 4.)
 
 | Anggota | Paket kerja | File utama |
 |---|---|---|
-| 1 | Data & Knowledge Base | `config.py`, `kb_loader.py`, `data/knowledge_base.json`, `tests/test_kb_loader.py` |
-| 2 | NLP & TF-IDF (Modul 5) | `preprocessing.py`, `tfidf.py`, `tests/test_preprocessing.py`, `tests/test_tfidf.py` |
-| 3 | LLM & Anti-Halusinasi | `llm_client.py`, `guardrail.py`, `tests/test_guardrail.py`, `tests/fakes.py` |
-| 4 | Router, CLI, Evaluasi & Dokumentasi | `router.py`, `cli.py`, `main.py`, `evaluasi/*`, `tests/test_router.py`, `README.md` |
+| 1 | Data & Knowledge Base | `config.py`, `kb_loader.py`, `data_akademik.py`, `data/*` (knowledge_base.json, kurikulum.json, jadwal.csv, jadwal_info.json, info_umum.json), `tests/test_kb_loader.py`, `tests/test_data_akademik.py` |
+| 2 | NLP & TF-IDF (Modul 5) | `preprocessing.py`, `tfidf.py`, `tests/test_preprocessing.py`, `tests/test_tfidf.py`, `tests/test_typo_sinonim.py` |
+| 3 | LLM & Anti-Halusinasi | `llm_client.py`, `llm_providers.py`, `llm_orchestrator.py`, `llm_demo.py`, `guardrail.py`, `tests/test_guardrail.py`, `tests/fakes.py` |
+| 4 | Router, CLI, Evaluasi & Dokumentasi | `router.py`, `menu.py`, `cli.py`, `web.py`, `static/index.html`, `main.py`, `evaluasi/*`, `tests/test_router.py`, `tests/test_menu.py`, `README.md` |
 
 Semua file ada di folder `akademikbot/` kecuali yang tertulis lain. Setiap berkas Python memuat
 baris `PENANGGUNG JAWAB` di bagian atas.
@@ -31,6 +31,7 @@ baris `PENANGGUNG JAWAB` di bagian atas.
 1. Ganti data contoh dengan data Prodi yang asli, tambahkan sumber (nama dokumen/bab/URL).
 2. Jalankan `python main.py --cek-kb` sampai tidak ada peringatan.
 3. Untuk setiap entri baru, tambahkan 1-2 kasus di `evaluasi/test_cases.json` (koordinasi dengan Anggota 4).
+4. Ganti `data/jadwal.csv` dan `data/info_umum.json` (masih DUMMY) dengan data resmi, jalankan `python main.py --cek-data` sampai tidak ada jadwal bentrok, lalu set `"dummy": false` di `data/jadwal_info.json`.
 
 ---
 

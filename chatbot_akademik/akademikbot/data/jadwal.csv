@@ -1,0 +1,40 @@
+kode,kelas,hari,mulai,selesai,ruang,dosen,jenis
+UNP.60.0001,A,Senin,07.30,10.00,R.A101,Dosen Contoh 1,Teori
+UNP.60.0007,A,Senin,10.30,12.10,R.A101,Dosen Contoh 2,Teori
+INF.62.0013,A,Selasa,07.30,09.10,R.B201,Dosen Contoh 3,Teori
+INF.62.0013,A,Rabu,13.00,14.40,Lab Komputer 1,Dosen Contoh 3,Praktik
+INF.62.0014,A,Selasa,10.00,11.40,R.B201,Dosen Contoh 4,Teori
+INF.62.0014,A,Kamis,13.00,14.40,Lab Komputer 2,Dosen Contoh 4,Praktik
+INF.62.0015,A,Rabu,07.30,09.10,R.B202,Dosen Contoh 5,Teori
+INF.62.0015,A,Jumat,08.00,11.20,Lab Jaringan,Dosen Contoh 5,Praktik
+INF.62.0016,A,Kamis,07.30,09.10,R.B202,Dosen Contoh 6,Teori
+INF.62.0016,A,Senin,13.30,15.10,Lab Komputer 1,Dosen Contoh 6,Praktik
+INF.62.0043,A,Jumat,13.30,15.10,R.B201,Dosen Contoh 7,Teori
+INF.62.0043,A,Selasa,14.00,15.40,Lab Komputer 2,Dosen Contoh 7,Praktik
+UNP.60.0002,A,Senin,07.30,09.10,R.A102,Dosen Contoh 8,Teori
+INF.62.0001,A,Senin,10.00,11.40,R.A102,Dosen Contoh 9,Teori
+INF.62.0001,A,Rabu,08.00,09.40,Lab Komputer 1,Dosen Contoh 9,Praktik
+INF.62.0002,A,Selasa,07.30,08.20,R.A102,Dosen Contoh 10,Teori
+INF.62.0002,A,Kamis,08.00,11.20,Lab Komputer 2,Dosen Contoh 10,Praktik
+INF.62.0003,A,Selasa,10.00,12.30,R.A102,Dosen Contoh 11,Teori
+INF.62.0004,A,Rabu,13.00,15.30,R.A102,Dosen Contoh 12,Teori
+INF.62.0005,A,Kamis,13.00,15.30,R.A102,Dosen Contoh 13,Teori
+INF.62.0006,A,Jumat,07.30,09.10,R.A102,Dosen Contoh 14,Teori
+INF.62.0006,A,Jumat,10.00,11.40,Lab Digital,Dosen Contoh 14,Praktik
+UNP.60.0005,A,Senin,08.00,09.40,R.C101,Dosen Contoh 15,Teori
+UNP.62.0001,A,Senin,10.30,12.10,R.C101,Dosen Contoh 16,Teori
+INF.62.0024,A,Selasa,08.00,10.30,R.C101,Dosen Contoh 17,Teori
+INF.62.0025,A,Selasa,10.30,12.10,R.C101,Dosen Contoh 18,Teori
+INF.62.0026,A,Rabu,08.00,09.40,R.C102,Dosen Contoh 19,Teori
+INF.62.0026,A,Rabu,13.00,14.40,Lab Komputer 3,Dosen Contoh 19,Praktik
+INF.62.0027,A,Kamis,08.00,09.40,R.C102,Dosen Contoh 20,Teori
+INF.62.0027,A,Kamis,13.00,14.40,Lab Komputer 3,Dosen Contoh 20,Praktik
+INF.62.0028,A,Jumat,08.00,09.40,R.C102,Dosen Contoh 1,Teori
+INF.62.0028,A,Jumat,13.00,14.40,Lab Komputer 3,Dosen Contoh 1,Praktik
+INF.62.0029,A,Senin,13.30,15.10,R.C101,Dosen Contoh 2,Teori
+INF.62.0044,A,Kamis,10.30,12.10,R.C102,Dosen Contoh 3,Teori
+INF.62.0037,A,Senin,09.00,10.40,R.D101,Dosen Contoh 4,Teori
+INF.62.0037,A,Selasa,13.00,14.40,R.D101,Dosen Contoh 4,Praktik
+INF.62.0038,A,Rabu,10.00,10.50,R.D101,Dosen Contoh 5,Teori
+INF.62.0038,A,Kamis,09.00,10.40,R.D101,Dosen Contoh 5,Praktik
+INF.62.0039,A,Jumat,09.00,10.40,R.D101,Dosen Contoh 6,Teori

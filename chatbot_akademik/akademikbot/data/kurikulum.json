@@ -1,0 +1,641 @@
+{
+  "_catatan": "Sumber: dokumen 'Daftar Matakuliah' Kurikulum 2025, Prodi Informatika (S1), Fakultas Teknik UNP. Kolom nilai pribadi sengaja TIDAK dimasukkan. 'sks_tercetak' = jumlah SKS pada dokumen (semua MK pilihan ikut dihitung).",
+  "universitas": "Universitas Negeri Padang",
+  "fakultas": "Fakultas Teknik",
+  "prodi": "Informatika (S1)",
+  "kurikulum": "2025",
+  "sumber": "Daftar Matakuliah Kurikulum 2025 Informatika (S1) UNP",
+  "semester": [
+    {
+      "no": 1,
+      "sks_tercetak": 20,
+      "matkul": [
+        {
+          "kode": "UNP.60.0002",
+          "nama": "Bahasa Indonesia",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Nasional"
+        },
+        {
+          "kode": "INF.62.0001",
+          "nama": "Algoritma Pemrograman",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0002",
+          "nama": "Fundamental Programming",
+          "sks": 3,
+          "t": 1,
+          "p": 2,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0003",
+          "nama": "Kalkulus",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0004",
+          "nama": "Statistik",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0005",
+          "nama": "Aljabar Linear",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0006",
+          "nama": "Sistem Digital",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sks_tercetak": 19,
+      "matkul": [
+        {
+          "kode": "UNP.60.0003",
+          "nama": "Pendidikan Kewarganegaraan",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Nasional"
+        },
+        {
+          "kode": "INF.62.0007",
+          "nama": "Struktur Data",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0001"
+          ]
+        },
+        {
+          "kode": "INF.62.0008",
+          "nama": "Organisasi dan Arsitektur Komputer",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0009",
+          "nama": "Sistem Basis Data",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0010",
+          "nama": "Logika Matematika",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0011",
+          "nama": "Pemrograman Web",
+          "sks": 3,
+          "t": 1,
+          "p": 2,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0001"
+          ]
+        },
+        {
+          "kode": "INF.62.0012",
+          "nama": "Matematika Diskrit",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sks_tercetak": 21,
+      "matkul": [
+        {
+          "kode": "UNP.60.0001",
+          "nama": "Pendidikan Agama",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Nasional"
+        },
+        {
+          "kode": "UNP.60.0007",
+          "nama": "Bahasa Inggris",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Universitas"
+        },
+        {
+          "kode": "INF.62.0013",
+          "nama": "Pemrograman Berorientasi Objek",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0002"
+          ]
+        },
+        {
+          "kode": "INF.62.0014",
+          "nama": "Sistem Operasi",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0008"
+          ]
+        },
+        {
+          "kode": "INF.62.0015",
+          "nama": "Jaringan Komputer",
+          "sks": 4,
+          "t": 2,
+          "p": 2,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0016",
+          "nama": "Artificial Intelligence",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0043",
+          "nama": "Kompleksitas Algoritma",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0007"
+          ]
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sks_tercetak": 28,
+      "matkul": [
+        {
+          "kode": "UNP.60.0004",
+          "nama": "Pendidikan Pancasila",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Nasional"
+        },
+        {
+          "kode": "UNP.60.0008",
+          "nama": "Bahasa Jepang",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Universitas"
+        },
+        {
+          "kode": "UNP.60.0009",
+          "nama": "Bahasa Mandarin",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Universitas"
+        },
+        {
+          "kode": "UNP.60.0010",
+          "nama": "Bahasa Arab",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Universitas"
+        },
+        {
+          "kode": "INF.62.0017",
+          "nama": "Rekayasa Perangkat Lunak",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0013"
+          ]
+        },
+        {
+          "kode": "INF.62.0018",
+          "nama": "Pengolahan Citra Digital",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0019",
+          "nama": "Interaksi Manusia dan Komputer",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0020",
+          "nama": "Perancangan dan Analisis Algoritma",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0043"
+          ]
+        },
+        {
+          "kode": "INF.62.0021",
+          "nama": "Data Science",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0022",
+          "nama": "Komputasi Paralel dan Terdistribusi",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0023",
+          "nama": "Administrasi Sistem Jaringan",
+          "sks": 2,
+          "t": 0,
+          "p": 2,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sks_tercetak": 22,
+      "matkul": [
+        {
+          "kode": "UNP.60.0005",
+          "nama": "Pengantar Kewirausahaan",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Universitas"
+        },
+        {
+          "kode": "UNP.62.0001",
+          "nama": "Pengantar Psikologi",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Universitas"
+        },
+        {
+          "kode": "INF.62.0024",
+          "nama": "Manajemen Proyek Teknologi Informasi",
+          "sks": 3,
+          "t": 3,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0025",
+          "nama": "Analisis dan Desain Perangkat Lunak",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0026",
+          "nama": "Pemrograman Berbasis Platform",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0027",
+          "nama": "Data Mining",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0004"
+          ]
+        },
+        {
+          "kode": "INF.62.0028",
+          "nama": "Kriptografi",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0029",
+          "nama": "Teori Bahasa dan Automata",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0044",
+          "nama": "Etika Profesi",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sks_tercetak": 23,
+      "matkul": [
+        {
+          "kode": "UNP.60.0011",
+          "nama": "Kuliah Kerja Nyata (KKN)",
+          "sks": 2,
+          "t": 0,
+          "p": 0,
+          "l": 2,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Universitas"
+        },
+        {
+          "kode": "INF.62.0030",
+          "nama": "Keamanan Data dan Informasi",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0035",
+          "nama": "Metodologi Penelitian",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0036",
+          "nama": "Capstone Project",
+          "sks": 3,
+          "t": 0,
+          "p": 3,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0031",
+          "nama": "Machine Learning",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Program Studi",
+          "prasyarat": [
+            "INF.62.0004",
+            "INF.62.0005"
+          ]
+        },
+        {
+          "kode": "INF.62.0032",
+          "nama": "Cloud Computing",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Program Studi"
+        },
+        {
+          "kode": "INF.62.0033",
+          "nama": "UI / UX Designer",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Program Studi"
+        },
+        {
+          "kode": "INF.62.0034",
+          "nama": "Internet of Things",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "pilihan",
+          "kelompok": "Mata Kuliah Pilihan Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sks_tercetak": 11,
+      "matkul": [
+        {
+          "kode": "INF.62.0037",
+          "nama": "Technopreneurship",
+          "sks": 3,
+          "t": 2,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0038",
+          "nama": "Bahasa Inggris Teknik",
+          "sks": 2,
+          "t": 1,
+          "p": 1,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0039",
+          "nama": "Penulisan Ilmiah",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        },
+        {
+          "kode": "INF.62.0040",
+          "nama": "Praktek Lapangan Industri",
+          "sks": 4,
+          "t": 0,
+          "p": 0,
+          "l": 4,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "sks_tercetak": 6,
+      "matkul": [
+        {
+          "kode": "INF.62.0041",
+          "nama": "Seminar Proposal",
+          "sks": 2,
+          "t": 2,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi",
+          "prasyarat": [
+            "INF.62.0035"
+          ]
+        },
+        {
+          "kode": "INF.62.0042",
+          "nama": "Tugas Akhir",
+          "sks": 4,
+          "t": 4,
+          "p": 0,
+          "l": 0,
+          "jenis": "wajib",
+          "kelompok": "Mata Kuliah Wajib Program Studi"
+        }
+      ]
+    }
+  ],
+  "prasyarat_dummy": true,
+  "_catatan_prasyarat": "DATA CONTOH: field 'prasyarat' (daftar kode mata kuliah) belum bersumber dari dokumen resmi. Ganti dengan prasyarat resmi lalu ubah 'prasyarat_dummy' menjadi false."
+}

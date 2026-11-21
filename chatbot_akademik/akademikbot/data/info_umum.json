@@ -1,0 +1,139 @@
+{
+  "_catatan": "DATA CONTOH (dummy) informasi perkuliahan umum. Ganti 'jawaban' dan 'sumber' dengan informasi resmi UNP/Prodi. Format sama dengan knowledge_base.json; berkas ini otomatis digabung ke KB.",
+  "entri": [
+    {
+      "id": "jamkuliah-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Jam kuliah dimulai dan selesai pukul berapa?",
+      "variasi": [
+        "jam perkuliahan",
+        "pukul berapa kuliah pertama dimulai",
+        "durasi satu sks",
+        "waktu mulai kuliah pagi"
+      ],
+      "kata_kunci": [
+        "jam kuliah",
+        "pukul",
+        "durasi",
+        "sks",
+        "waktu",
+        "perkuliahan",
+        "mulai"
+      ],
+      "jawaban": "Perkuliahan hari Senin sampai Jumat dimulai pukul 07.30. Satu SKS teori berdurasi 50 menit dan satu SKS praktik berdurasi 100 menit. Perkuliahan terakhir pada hari kerja berakhir sekitar pukul 17.00.",
+      "sumber": "DUMMY - jam perkuliahan (ganti dengan aturan resmi)"
+    },
+    {
+      "id": "gedung-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Di mana lokasi ruang kuliah dan laboratorium Prodi Informatika?",
+      "variasi": [
+        "gedung kuliah informatika",
+        "letak lab komputer",
+        "dimana lab jaringan",
+        "ruang kelas prodi informatika",
+        "kode ruangan R.A101 di mana"
+      ],
+      "kata_kunci": [
+        "ruang",
+        "gedung",
+        "lab",
+        "laboratorium",
+        "kelas",
+        "lokasi",
+        "informatika"
+      ],
+      "jawaban": "Ruang kelas berkode R.A, R.B, R.C, dan R.D berada di gedung perkuliahan Fakultas Teknik. Laboratorium komputer, jaringan, dan digital berada di gedung laboratorium Prodi Informatika. Huruf pada kode ruang menunjukkan blok gedung.",
+      "sumber": "DUMMY - denah gedung (ganti dengan informasi resmi)"
+    },
+    {
+      "id": "perubahan-jadwal-01",
+      "kategori": "Perkuliahan",
+      "pertanyaan": "Bagaimana jika jadwal kuliah berubah atau dosen berhalangan hadir?",
+      "variasi": [
+        "jadwal kuliah diganti",
+        "kuliah dipindah ruangan",
+        "perubahan jadwal dosen",
+        "info kelas kosong"
+      ],
+      "kata_kunci": [
+        "perubahan",
+        "jadwal",
+        "pindah",
+        "ganti",
+        "dosen",
+        "kelas"
+      ],
+      "jawaban": "Perubahan jadwal atau ruang diumumkan oleh dosen pengampu melalui grup kelas dan e-learning. Jika dosen berhalangan, kelas dapat diganti pada waktu lain yang disepakati bersama. Pastikan jadwal terbaru di SIAKAD sebelum datang ke kampus.",
+      "sumber": "DUMMY - kebijakan perkuliahan (ganti dengan aturan resmi)"
+    }
+  ],
+  "kalender_dummy": true,
+  "kalender_akademik": [
+    {
+      "id": "krs",
+      "nama": "Pengisian KRS",
+      "mulai": "2026-08-17",
+      "akhir": "2026-08-28",
+      "kata_kunci": [
+        "krs",
+        "pengisian krs",
+        "registrasi"
+      ]
+    },
+    {
+      "id": "awal-kuliah",
+      "nama": "Awal perkuliahan",
+      "mulai": "2026-08-31",
+      "kata_kunci": [
+        "awal kuliah",
+        "mulai kuliah",
+        "perkuliahan dimulai",
+        "awal perkuliahan"
+      ]
+    },
+    {
+      "id": "revisi-krs",
+      "nama": "Batas revisi KRS",
+      "mulai": "2026-09-11",
+      "kata_kunci": [
+        "revisi krs",
+        "batas krs",
+        "perubahan krs",
+        "ubah krs"
+      ]
+    },
+    {
+      "id": "uts",
+      "nama": "Minggu UTS",
+      "mulai": "2026-10-19",
+      "akhir": "2026-10-30",
+      "kata_kunci": [
+        "uts",
+        "ujian tengah semester"
+      ]
+    },
+    {
+      "id": "skripsi",
+      "nama": "Batas pengajuan skripsi",
+      "mulai": "2026-12-04",
+      "kata_kunci": [
+        "skripsi",
+        "tugas akhir",
+        "pengajuan judul",
+        "batas skripsi"
+      ]
+    },
+    {
+      "id": "uas",
+      "nama": "Minggu UAS",
+      "mulai": "2026-12-14",
+      "akhir": "2026-12-23",
+      "kata_kunci": [
+        "uas",
+        "ujian akhir semester"
+      ]
+    }
+  ],
+  "_catatan_kalender": "DATA CONTOH (dummy): tanggal belum resmi. Ganti dengan kalender akademik resmi lalu ubah 'kalender_dummy' menjadi false. Format tanggal YYYY-MM-DD; 'akhir' opsional (bila ada = rentang)."
+}

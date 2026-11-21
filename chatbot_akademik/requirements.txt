@@ -1,0 +1,8 @@
+# Hanya dibutuhkan untuk mengaktifkan LLM. Mode --offline (KB + TF-IDF) tidak butuh paket apa pun.
+anthropic>=0.40.0
+# Memuat berkas .env otomatis (opsional; tanpa ini .env diabaikan dan variabel harus diatur manual).
+python-dotenv>=1.0.0
+# Membaca PDF pada fitur "Unggah dokumen" (opsional; tanpa ini hanya .txt yang bisa diunggah).
+pypdf>=4.0.0
+# Database zona waktu untuk WIB di Windows (opsional; tanpa ini dipakai UTC+7 tetap, hasilnya sama).
+tzdata; platform_system == "Windows"
